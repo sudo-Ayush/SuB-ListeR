@@ -21,7 +21,7 @@ domain = input('Enter the domain name : ')
 clear = 'cls'
 os.system(clear)
 
-file = open('domains.txt','r')
+file = open('sub-list.txt','r')
 
 name = file.read()
 subs = name.splitlines()
