@@ -35,7 +35,7 @@ print(f"""{Fore.RED} _______________
 print(f'{Fore.YELLOW} [-] Usage: Enter the domain name without <http> or <https>')
 print(f'{Fore.YELLOW} [-] Example: google.com')
 print(f'{Fore.YELLOW} [-] Enter the domain name :\n')
-domain = input(f">").lower()
+domain = input(f"> ").lower()
 
 if name == 'nt':
 	_ = system('cls')
