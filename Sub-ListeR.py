@@ -1,39 +1,52 @@
 from requests.models import Response
+from colorama import Fore
+import colorama
+import time
 import requests
 import os
 
-color = 'color 04'
-os.system(color)
-print(""" _______________
+colorama.init(autoreset=True)
+
+clear = 'cls'
+os.system(clear)
+
+print(f'{Fore.YELLOW} STARTING SubLister....')
+time.sleep(2)
+
+clear = 'cls'
+os.system(clear)
+
+print(f"""{Fore.RED} _______________
 < !!SuB-ListeR!! >
  ---------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/
                 ||----w |
-                ||     ||""")
+                ||     ||\n""")
 
 
-print('Usage: Enter the domain name without <http> or <https>')
-print('Example: google.com')
-domain = input('Enter the domain name : ')
+print(f'{Fore.YELLOW} [-] Usage: Enter the domain name without <http> or <https>')
+print(f'{Fore.YELLOW} [-] Example: google.com')
+print(f'{Fore.YELLOW} [-] Enter the domain name :')
+domain = input(f">")
 
 clear = 'cls'
 os.system(clear)
 
-file = open('sub-list.txt','r')
+file = open('domains.txt','r')
 
 name = file.read()
 subs = name.splitlines()
-colour = 'color 02'
-os.system(colour)
 discovered_subdomains = []
 for sub in subs:
-    url = f"http://{sub}.{domain}"
+    url = f"https://{sub}.{domain}"
     try:
         requests.get(url)
     except requests.ConnectionError:
         pass
     else:
-        print("[+] Discovered subdomain:", url)
+        print(f"{Fore.GREEN}[+] Discovered subdomain:", url)
         discovered_subdomains.append(url)
+
+print(f'{Fore.YELLOW} Finished...!')
