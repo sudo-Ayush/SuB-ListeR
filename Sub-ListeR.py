@@ -3,18 +3,15 @@ from colorama import Fore
 import colorama
 import time
 import requests
-import os
 
 colorama.init(autoreset=True)
 
-clear = 'cls'
-os.system(clear)
+print("\n"*80)
 
 print(f'{Fore.YELLOW} STARTING SubLister....')
 time.sleep(2)
 
-clear = 'cls'
-os.system(clear)
+print("\n"*80)
 
 print(f"""{Fore.RED} _______________
 < !!SuB-ListeR!! >
@@ -31,8 +28,7 @@ print(f'{Fore.YELLOW} [-] Example: google.com')
 print(f'{Fore.YELLOW} [-] Enter the domain name :')
 domain = input(f">")
 
-clear = 'cls'
-os.system(clear)
+print("\n"*80)
 
 file = open('sub-list.txt','r')
 
