@@ -1,4 +1,5 @@
 from requests.models import Response
+from os import system, name
 from colorama import Fore
 import colorama
 import time
@@ -6,12 +7,20 @@ import requests
 
 colorama.init(autoreset=True)
 
-print("\n"*80)
+if name == 'nt':
+	_ = system('cls')
+
+else:
+	_ = system('clear')
 
 print(f'{Fore.YELLOW} STARTING SubLister....')
 time.sleep(2)
 
-print("\n"*80)
+if name == 'nt':
+	_ = system('cls')
+
+else:
+	_ = system('clear')
 
 print(f"""{Fore.RED} _______________
 < !!SuB-ListeR!! >
@@ -25,10 +34,14 @@ print(f"""{Fore.RED} _______________
 
 print(f'{Fore.YELLOW} [-] Usage: Enter the domain name without <http> or <https>')
 print(f'{Fore.YELLOW} [-] Example: google.com')
-print(f'{Fore.YELLOW} [-] Enter the domain name :')
+print(f'{Fore.YELLOW} [-] Enter the domain name :\n')
 domain = input(f">")
 
-print("\n"*80)
+if name == 'nt':
+	_ = system('cls')
+
+else:
+	_ = system('clear')
 
 file = open('sub-list.txt','r')
 
