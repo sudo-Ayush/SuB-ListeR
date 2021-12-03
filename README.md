@@ -1,9 +1,9 @@
-# SuB-EnuM
+# SuB-ListeR
 
 **Simple python script to enumerate sub-domains**
 
 ```
-< !!SuB-EnuM!! >
+< !!SuB-ListeR!! >
  ---------------
         \   ^__^
          \  (oo)\_______
